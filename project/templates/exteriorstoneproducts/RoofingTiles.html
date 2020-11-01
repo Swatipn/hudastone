@@ -1,0 +1,90 @@
+{% extends 'basic.html' %}
+{% block title %}
+ROOF TILES
+{% endblock title %}
+
+{% block body %}
+
+{% load static %}
+
+
+
+<div class="container">
+    <div class="media  mt-3">
+        <img src="{% static 'images/roof1.jpg' %}" width="400" height="300" class=" mr-3" alt="">
+        <div class="media-body">
+            <h5 class="mt-0">Roof TIles</h5>
+                <p>Roof tiles are designed mainly to keep out rain, and are traditionally made from locally available materials such as terracotta or slate. Modern materials such as concrete and plastic are also used and some clay tiles have a waterproof glaze. Roof tiles are
+                 'hung' from the framework of a roof by fixing them with nails.
+
+                Article Source: http://EzineArticles.com/6140124.</p>
+                
+         </div>
+    </div> 
+             <h5 class="mt-3">ROOF TILES</h5>   
+                <p>Roof tiles are designed mainly to keep out rain, and are traditionally made from locally available materials such as terracotta or slate. Modern materials such as concrete and plastic are also used and some clay tiles have a waterproof glaze. Roof tiles are 
+                'hung' from the framework of a roof by fixing them with nails.
+                       Article Source: http://EzineArticles.com/6140124
+            <br>
+            In outdoors, mosaics can undergo certain discoloration and cracking due to UV rays exposure and extreme temperatures. This becomes more noticeable in violet, blue and green colors.
+            <br>
+            It is important to take into account that when installed outdoors, mosaics will not take color or shine the same way they do in interiors.
+            <br>
+            Part of the charm of these tiles is that they are not “perfect”, that is also why they are The hydraulic mosaic is a hard material that recovers traditional manufacture by using considered handicraft materials.
+            </p>
+</div>           
+
+<div class="container mt-4">
+    <table class="table">
+    <h4>DIFFERENT ROOF TILES IMAGES</h4>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators" >
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+  </ol>
+    <div class="carousel-inner" >
+
+        <div class="carousel-item active" >
+            <img src="{% static 'images/roof2.jpg' %}" class="d-block w-100" alt="" height="500" width="500">
+        </div>
+
+        <div class="carousel-item">
+            <img src="{% static 'images/roof3.jpg' %}" class="d-block w-100" alt="" height="500" width="500">
+        </div>
+
+        <div class="carousel-item">
+            <img src="{% static 'images/roof4.jpg' %}" class="d-block w-100" alt="" height="500" width="500">
+        </div>
+
+        <div class="carousel-item">
+            <img src="{% static 'images/roof1.jpg' %}" class="d-block w-100" alt="" height="500" width="500">
+        </div>
+
+        <div class="carousel-item">
+            <img src="{% static 'images/roof2.jpg' %}" class="d-block w-100" alt="" height="500" width="500">
+        </div>
+
+        <div class="carousel-item">
+            <img src="{% static 'images/roof3.jpg' %}" class="d-block w-100" alt="" height="500" width="500">
+        </div>
+
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    </table>
+</div>
+
+
+
+{% endblock body %}
+

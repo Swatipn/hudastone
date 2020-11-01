@@ -1,0 +1,76 @@
+{% extends 'basic.html' %}
+{% block title %}
+Contact
+
+{% endblock title %}
+{% block body %}
+
+
+
+  
+  
+  
+
+            
+
+
+<marquee behavior="" direction="">CONTACT TO THE WEBSITE ADMIN</marquee>
+  <div class="container mt-4">
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+    <div class="row">
+        <div class="col-md-2"></div>
+
+        <div class="col-md-8">
+            <div class="card mt-4">
+                <h4 class="text-center">CONTACT US</h4>
+            <div class="card-body">
+
+           
+
+                <form action="/contact" method="POST"><input type="hidden" name="csrfmiddlewaretoken" value="UG904sStfsvWQHMEbMPpyHnNheXpLVTqadHFTYG6TrFXTFV4FOhHmc2yv2BSmmRv">{% csrf_token %}
+                <div class="form-group">
+                    <label for="fullname">FULL Name</label>
+                    <input type="text" class="form-control" name="fullname" id="fullname"  required>
+                </div>
+               
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="num">PHONE NUMBER</label>
+                    <input type="text" class="form-control" name="num" id="num" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="desc">ENTER YOUR QUERY HERE!!</label>
+                    <textarea  class="form-control" name="desc" id="desc" row="2" required></textarea>
+                </div>
+
+               
+                    <button type="submit" class="btn btn-outline-success btn-sm btn-block mt-3">Submit</button>
+
+
+                </form>
+
+           
+            </div>
+               
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+</div>
+
+
+</div>
+         
+
+
+
+{% endblock body %}

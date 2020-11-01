@@ -1,0 +1,86 @@
+{% extends 'basic.html' %}
+{% block title %}
+StonePebbles
+{% endblock title %}
+
+
+{% block body %}
+
+{% load static %}
+
+<div class="container">
+    <div class="media  mt-3">
+        <img src="{% static 'images/pebbles.jpg' %}" width="200" height="200" class=" mr-3" alt="">
+        <div class="media-body">
+            <h5 class="mt-0">STONE PEBBLES</h5>
+                <p>We are a full-service stone fabricator specializing in functional and custom stone design.
+                 We work closely with architects, designers & contractors bringing their projects to realization. 
+                 We also stock a full line of stone fountains, 
+                placement pieces and specialty stone creations.
+                </p>
+        </div>
+    </div>
+     <h5 class="mt-3">STONE PEBBLES</h5>
+                <p>
+    In addition to our stone fabrication, we are among the leaders in the manufacturing and distribution of landscape materials, including decorative pebbles, beach glass and pebble tile. Another area Coverall Stone specializes in is basalt and granite paving material and dimensionally cut stone.
+In business since 2000, we have years of experience in the handling and customization of natural stone. Coverall Stone ships anywhere in North America and beyond and has the ability to source many types of stone within a 250 mile radius of your project to meet certain LEED requirements.
+Based in Seattle, Washington, we were inspired by the natural basalt formations and columns prevalent in Eastern Washington. What started with one little saw has grown into a full fabrications shop that specializes in natural stone creations and products that will add a definite look to your landscaping project. Fountains, monuments, lights and furniture are just some of the items we create out of basalt and other stone material.
+Over the years we've added a full line of decorative pebbles, pebble tile and granite creations to round out our natural stone collection, giving you a company you can rely on to truly "cover all " of your stone needs.
+ </P>
+</div>
+
+<div class="container mt-4">
+    <table class="table">
+    <h4 class="mb-3">DIFFERENT PEBBLE STONES</h4>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+  </ol>
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <img src="{% static 'images/pebbles3.jpg' %}" class="d-block w-100" alt="" height="500" width="500">
+        </div>
+
+        <div class="carousel-item">
+            <img src="{% static 'images/pebbles2.jpg' %}" class="d-block w-100" alt="" height="500" width="500">
+        </div>
+
+        <div class="carousel-item">
+            <img src="{% static 'images/pebbles4.jpg' %}" class="d-block w-100" alt="" height="500" width="500">
+        </div>
+
+        <div class="carousel-item">
+            <img src="{% static 'images/pebbles5.jpg' %}" class="d-block w-100" alt="" height="500" width="500">
+        </div>
+
+        <div class="carousel-item">
+            <img src="{% static 'images/pebbles6.jpg' %}" class="d-block w-100" alt="" height="500" width="500">
+        </div>
+
+        <div class="carousel-item">
+            <img src="{% static 'images/pebbles7.jpg' %}" class="d-block w-100" alt="" height="500" width="500">
+        </div>
+
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    </table>
+</div>
+
+
+
+
+
+{% endblock body %}

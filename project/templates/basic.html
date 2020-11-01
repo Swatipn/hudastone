@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+     
+    <title>
+    {% block title %}
+
+
+    {% endblock title %}
+    </title>
+    
+    {% load static %}
+
+    
+
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+
+<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Natural Stones
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/kadapablack">Kadapa Black</a>
+          <a class="dropdown-item" href="/TandurBlue">Tandur Blue</a>
+         <a class="dropdown-item" href="/TandurYellow">Tandur Yellow</a>
+        <a class="dropdown-item" href="/KarnoolGray">Karnool Gray</a>
+          <a class="dropdown-item" href="/LimeStones">LimeStones</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Exterior Stone Products
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/BlockSteps">BlockSteps</a>
+          <a class="dropdown-item" href="/Cobbles">Cobbles</a>
+          <a class="dropdown-item" href="/FlagStone">FlagStone</a>
+          <a class="dropdown-item" href="/KerbStones">KerbStones</a>
+          <a class="dropdown-item" href="/Palisader">Palisader</a>
+          <a class="dropdown-item" href="/PoolCoping">Pool Coping</a>
+          <a class="dropdown-item" href="/RoofingTiles">Roofing Tiles</a>
+          <a class="dropdown-item" href="/StonePaving">Stone Pavings</a>
+          <a class="dropdown-item" href="/PierCaps">Pier Caps</a>
+          <a class="dropdown-item" href="/StoneQuoins">Stone Quoins</a>
+        </div>
+      </li>
+
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Interior Stone Products
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/StoneVenus">Stone Venus</a>
+          <a class="dropdown-item" href="/MosaicTiles">Mosaic-Tiles</a>
+           <a class="dropdown-item" href="/StonePebbles">StonePebbles</a>
+          <a class="dropdown-item" href="/WindowSills">Window Sills</a>
+        </div>
+      </li>
+
+
+
+       <li class="nav-item">
+        <a class="nav-link" href="/gallery">Gallery</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/services">Services</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/contact">Contact </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/about">About</a>
+      </li>
+
+      {% if user.is_authenticated %}
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <b>Welcome {{request.user}}</b></a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="/logout">LogOut</a>
+        </div>
+      </li>
+
+
+
+
+      {% else %}
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Authentication
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/signup">Sign Up</a>
+          <a class="dropdown-item" href="/login">Login</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/logout">LogOut</a>
+        </div>
+      </li>
+    {% endif %} 
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0" action="/search" method="get">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search" id="search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+ {% for message in messages %}
+                <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
+                    <strong></strong>{{message}} 
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+            {% endfor %}
+
+
+            
+
+{% block body %}
+
+
+
+{% endblock body %}
+
+<div class="card text-white bg-dark mt-5">
+  <div class="card-body">
+  <div class="container">
+  <div class="row">
+    <div class="col-sm">
+     <h5 class="card-title"><b>HUDASTONE INDUSTRIES</b></h5>
+      
+      <table class="table text-white">
+      <tbody>
+
+      <tr>
+      <td><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-geo-alt-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">Huda stone industries,Banglore-560009
+      <path fill-rule="evenodd" d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+      </svg></td>
+      <td>Huda stone industries,Banglore-560009</td>
+      </tr>
+      
+      <tr>
+      <td><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-telephone-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
+      </svg> </td>
+      <td>9110850609</td>
+      </tr>
+
+      <tr>
+      <td><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-envelope" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+        </svg></td>
+      <td>hudastone3@gmail.com</td>
+      </tr>
+      </tbody>
+      </table>
+
+      
+      <br><br>
+    <div class="col-sm">
+      <h5 class="card-title"><b>ABOUT US</b></h5>
+      <p>Swati Naik<br>Tushara Singh<br>Aditya Prasad<br>Developers of Hudastone Industries</p>
+    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    .fa {
+      padding: 20px;
+      font-size: 30px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+    }
+    
+    .fa:hover {
+        opacity: 0.7;
+    }
+    
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+    
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    
+    .fa-google {
+      background: #dd4b39;
+      color: white;
+    }
+    
+    .fa-linkedin {
+      background: #007bb5;
+      color: white;
+    }
+    
+    .fa-youtube {
+      background: #bb0000;
+      color: white;
+    }
+    
+    .fa-instagram {
+      background: #125688;
+      color: white;
+    }
+    </style>
+    <body>
+      
+      <!-- Add font awesome icons -->
+      <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+      <a href="https://twitter.com/" class="fa fa-twitter"></a>
+      <a href="https://www.google.com/" class="fa fa-google"></a>
+      <a href="https://www.linkedin.com/" class="fa fa-linkedin"></a>
+      <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+      <a href="https://instagram.com/" class="fa fa-instagram"></a>
+    
+    </body>
+
+
+<br><br>
+    <div class="col-sm">
+     <h5 class="card-title"><b>CONTACT QUERY</b></h5>
+     <p>We will get you soon</p>
+    <form>
+    <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="email" class="form-control" id="email">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+    </div>
+  </div>
+ 
+</div>
+    
+    <p class="card-text"></p>
+  </div>
+</div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
+
